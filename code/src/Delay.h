@@ -1,10 +1,12 @@
-#ifndef __DELAY_H_
-#define __DELAY_H_
+#ifndef DELAY_H
+#define DELAY_H
+#include <STC89C5xRC.H>
+
+                        
 
 void Delay(unsigned int t)
 {
     while(t--);
-    return;
 }
 
-#endif __DELAY_H_
+#endif //DELAY_H
