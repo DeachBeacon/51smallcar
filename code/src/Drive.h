@@ -15,7 +15,7 @@ sbit M4A=P2^6;                            //定义右后电机驱动A端
 sbit M4B=P2^7;                            //定义右后电机驱动B端
 
 void stop(int i){
-    if (i == 1) {
+    if (i == 0) {
         M1A = 0;
         M1B = 0;
         M2A = 0;
@@ -26,4 +26,4 @@ void stop(int i){
         M4B = 0;
     }
 }
-#endif // DRIVE_H
+#endif
