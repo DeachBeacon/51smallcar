@@ -4,9 +4,7 @@
 
                         
 
-void Delay(unsigned int t)
-{
-    while(t--);
-}
+void Delay1ms(void);
+void Delay(unsigned int ms);
 
 #endif
