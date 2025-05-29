@@ -3,6 +3,7 @@
 #include <STC89C5xRC.H>
 #include "Motor.h"
 #include "Delay.h"
+#include "Track.h"
 
 sbit LED1=P1^2; // ?????????
 sbit LED2=P1^3;
@@ -16,6 +17,7 @@ void main()
     unsigned int Time,i;
     stop(1);
     Control_Motion(1,1);
+    Track_Control;
     while(1)
     {
         for(Time=0;Time<100;Time++) // ??????,????
