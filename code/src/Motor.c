@@ -50,7 +50,7 @@ void Control_Motion(unsigned char direction, unsigned char speed) {
             break;
     }
 }
-void stop(unsigned int i){
+void stop(unsigned char i){
     if (i == 0) {
         M1A = 0; M1B = 0;
         M2A = 0; M2B = 0;

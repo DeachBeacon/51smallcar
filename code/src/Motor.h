@@ -34,7 +34,7 @@ sbit M4B=P2^7;                            //定义右后电机驱动B端
 #define RIGHT_MOTOR_STOP  {M2A=0; M2B=0; M4A=0; M4B=0;}
 
 // 函数声明
-void stop(unsigned int i);
+void stop(unsigned char i);
 void Motor_Init(void);           //main里要先调用这个初始化PWM
 void Control_Motion(unsigned char direction, unsigned char speed);
 
