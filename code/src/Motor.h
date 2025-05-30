@@ -23,10 +23,10 @@ sbit M4B=P2^7;                            //定义右后电机驱动B端
 #define LOW_SPEED   2
 
 // PWM占空比配置（单位：1%）
-#define FORWARD_HIGH_DUTY  70    // 前进高速档占空比70%
-#define FORWARD_LOW_DUTY   40    // 前进低速档占空比40%
-#define TURN_HIGH_DUTY     30    // 转向高速档占空比30%
-#define TURN_LOW_DUTY      20    // 转向低速档占空比20%
+#define FORWARD_HIGH_DUTY  40    // 前进高速档占空比70%
+#define FORWARD_LOW_DUTY   20    // 前进低速档占空比40%
+#define TURN_HIGH_DUTY     20    // 转向高速档占空比30%
+#define TURN_LOW_DUTY      10    // 转向低速档占空比20%
 
 // 电机方向控制宏
 #define ALL_MOTOR_FORWARD {M1A=1; M1B=0; M2A=1; M2B=0; M3A=1; M3B=0; M4A=1; M4B=0;}
