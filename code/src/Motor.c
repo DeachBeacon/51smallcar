@@ -1,4 +1,5 @@
 #include "Motor.h"
+#include "LED.h"
 #include <STC89C5xRC.H>
 
 unsigned char Compare = 0;   // PWM比较值
@@ -21,32 +22,41 @@ void Control_Motion(unsigned char direction, unsigned char speed) {
             // 根据速度档位设置占空比
             if (speed == HIGH_SPEED) {
                 Compare = FORWARD_HIGH_DUTY;
+                LED_2(LED_ON);          
             } else {
                 Compare = FORWARD_LOW_DUTY;
+                LED_3(LED_ON);
             }
             ALL_MOTOR_FORWARD;
+            LED_6(LED_ON);
             break;
             
         case TURN_LEFT:
             // 左转时左侧电机减速，右侧电机保持
             if (speed == HIGH_SPEED) {
                 Compare = TURN_HIGH_DUTY;
+                LED_2(LED_ON);
             } else {
                 Compare = TURN_LOW_DUTY;
+                LED_3(LED_ON);
             }
             LEFT_MOTOR_STOP;
             M2A = 1; M2B = 0; M4A = 1; M4B = 0;
+            LED_5(LED_ON);
             break;
             
         case TURN_RIGHT:
             // 右转时右侧电机减速，左侧电机保持
             if (speed == HIGH_SPEED) {
                 Compare = TURN_HIGH_DUTY;
+                LED_2(LED_ON);
             } else {
                 Compare = TURN_LOW_DUTY;
+                LED_3(LED_ON);
             }
             RIGHT_MOTOR_STOP;
             M1A = 1; M1B = 0; M3A = 1; M3B = 0;
+            LED_4(LED_ON);
             break;
     }
 }
@@ -56,5 +66,11 @@ void stop(unsigned char i){
         M2A = 0; M2B = 0;
         M3A = 0; M3B = 0;
         M4A = 0; M4B = 0;
+        LED_2(LED_ON);
+        LED_3(LED_ON);
+        LED_4(LED_ON);
+        LED_5(LED_ON);
+        LED_6(LED_ON);
+        LED_7(LED_ON);
     }
 }
