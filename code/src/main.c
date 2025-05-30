@@ -1,4 +1,3 @@
-//测试test
 //所有变量要在最开始就声明
 #include <STC89C5xRC.H>
 #include "Motor.h"
@@ -9,11 +8,9 @@
 void main()
 {
     LED_Init();
-    stop(1);
     Track_Init();
-    while(1)
-    {
+    Motor_Init();
+    while(1){
         Track_Control();
-        // Control_Motion(1,2);
     }
 }

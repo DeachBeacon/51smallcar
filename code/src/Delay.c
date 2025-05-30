@@ -11,8 +11,12 @@ void Delay1ms(void){
     }
 }
 
-void Delay(unsigned char ms){
+void DelayMs(unsigned char ms){
     while(ms--){
         Delay1ms();        // 调用1ms基础延时函数
     }
+}
+
+void Delay(unsigned char t){
+    while(t--);
 }
