@@ -4,13 +4,19 @@
 #include "Delay.h"
 #include "Track.h"
 #include "LED.h"
+#include "Speed.h"
 
 void main()
 {
+    unsigned char i;
+    unsigned char speed;
     LED_Init();
     Track_Init();
     Motor_Init();
     while(1){
         Track_Control();
+        for (i = 0;i < 1000; i++){
+            speed = Get_Speed();
+        }
     }
 }
