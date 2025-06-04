@@ -5,6 +5,7 @@
 #include "Track.h"
 #include "LED.h"
 #include "Speed.h"
+#include "Show.h"
 
 void main()
 {
@@ -18,5 +19,6 @@ void main()
         for (i = 0;i < 1000; i++){
             speed = Get_Speed();
         }
+        display_speed(speed);
     }
 }
