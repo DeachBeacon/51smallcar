@@ -6,8 +6,8 @@ void Delay1ms(void){
     unsigned char j;       // 内层循环变量
     
     while(i--){
-        j = 249;           // 内层循环次数 = 249+1 = 250次
-        while(j--);        // 250次*2周期 = 500机器周期
+        j = 249;           // 内层循环次数=249+1=250次
+        while(j--);        // 250次*2周期=500机器周期
     }
 }
 
@@ -17,6 +17,11 @@ void DelayMs(unsigned char ms){
     }
 }
 
-void Delay(unsigned char t){
-    while(t--);
+void Delay(void){
+    unsigned char i = 3;   // 外层循环次数
+    unsigned char t;       // 内层循环变量
+    while(t--){
+        t = 249;           // 内层循环次数=249+1=250次
+        while(t--); 
+    }
 }

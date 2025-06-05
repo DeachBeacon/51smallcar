@@ -4,6 +4,6 @@
 
 void Delay1ms(void);
 void DelayMs(unsigned char ms);
-void Delay(unsigned char t);
+void Delay(void);
 
 #endif

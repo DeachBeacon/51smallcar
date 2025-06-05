@@ -30,7 +30,7 @@ void Motor_Control(unsigned char cmd) {
         M3A = 1; M3B = 0; // 左后正转
         M4A = 0; M4B = 1; // 右后反转
         LED_4(LED_ON);
-        DelayMs(1);
+        DelayMs(3);
         Motor_Init();
         DelayMs(6);
     }
@@ -40,7 +40,7 @@ void Motor_Control(unsigned char cmd) {
         M3A = 0; M3B = 1; // 左后反转
         M4A = 1; M4B = 0; // 右后正转
         LED_3(LED_ON);
-        DelayMs(1);
+        DelayMs(3);
         Motor_Init();
         DelayMs(6);
     }
@@ -50,7 +50,6 @@ void Motor_Control(unsigned char cmd) {
         M3A = 0; M3B = 0;
         M4A = 0; M4B = 0;
         LED_5(LED_ON);
-        LED_6(LED_ON);
         DelayMs(10);
     }          
     LED_Init();
